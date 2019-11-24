@@ -1,0 +1,44 @@
+$colormain: #192a80;
+$colormain2: #770000;
+.main {
+  padding: 83px 0 0;
+  .title {
+		position: relative;
+		display: inline-block;
+		.icon {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			top: calc(50% - 4px);
+    	left: 65px;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: -4px;
+			width: calc(100% + 21px);
+			height: 2px;
+			background-color: #000;
+		}
+  }
+}
+.form {
+	padding: 0 25px;
+	margin-top: 26px;
+	&__wrap {
+		margin: 7px -7px 0;
+	}
+	&__item {
+		padding: 0 7px;
+		.form-control {
+			border-radius: 5px;
+		}
+	}
+	&__label {
+		color: $colormain;
+		margin: 0 0 4px 0;
+		span {
+			color: $colormain2;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+@import url(font.css);
+@import url(bootstrap.min.css);
+@import url(animate.css);
+@import url(swiper.min.css);
+@import url(icon.css);
+@import url(menubar.css);
+@import url(header.css);
+@import url(main.css);
+@import url(footer.css);
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-size: 14px;
+  transition: 0.3s;
+}
+body.menuactive {
+  position: relative;
+  margin-left: 160px;
+}
+body.menuactive .menu {
+  left: 0;
+}
+
+.transition03s {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.title {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+.title__form {
+  font-size: 14px;
+  color: #192a80;
+  margin-top: 17px;
+}
+.title__form::after {
+  display: none;
+}
+.title__form:first-child {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

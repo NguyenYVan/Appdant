@@ -1,0 +1,45 @@
+.main {
+  padding: 83px 0 0;
+}
+.main .title {
+  position: relative;
+  display: inline-block;
+}
+.main .title .icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(50% - 4px);
+  left: 65px;
+}
+.main .title::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -4px;
+  width: calc(100% + 21px);
+  height: 2px;
+  background-color: #000;
+}
+
+.form {
+  padding: 0 25px;
+  margin-top: 26px;
+}
+.form__wrap {
+  margin: 7px -7px 0;
+}
+.form__item {
+  padding: 0 7px;
+}
+.form__item .form-control {
+  border-radius: 5px;
+}
+.form__label {
+  color: #192a80;
+  margin: 0 0 4px 0;
+}
+.form__label span {
+  color: #770000;
+}
+
+/*# sourceMappingURL=main.css.map */

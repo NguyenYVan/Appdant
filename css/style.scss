@@ -1,0 +1,56 @@
+@import "font.css";
+@import "bootstrap.min.css";
+@import "animate.css";
+@import "swiper.min.css";
+@import "icon.css";
+@import "menubar.css";
+@import "header.css";
+@import "main.css";
+@import "footer.css";
+$colormain: #192a80;
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow: hidden;
+  color: #fff;
+  font: {
+    family: 'Source Sans Pro';
+    weight: 400;
+    size: 14px;
+  }
+  transition: 0.3s;
+  &.menuactive {
+    position: relative;
+    margin-left: 160px;
+   .menu {
+     left: 0;
+   }
+  }
+}
+.transition03s {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.title {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  &__form {
+    font-size: 14px;
+    color: $colormain;
+    margin-top: 17px;
+    &::after {
+      display: none;
+    }
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
