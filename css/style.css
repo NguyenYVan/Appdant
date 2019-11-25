@@ -9,51 +9,48 @@
 @import url(footer.css);
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 html {
-  scroll-behavior: smooth;
-}
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   color: #fff;
   font-family: 'Source Sans Pro';
   font-weight: 400;
   font-size: 14px;
-  transition: 0.3s;
-}
-body.menuactive {
-  position: relative;
-  margin-left: 160px;
-}
-body.menuactive .menu {
-  left: 0;
-}
+  transition: 0.3s; }
+  body.menuactive {
+    margin-left: 160px; }
+    body.menuactive .menu {
+      left: 0; }
 
 .transition03s {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   -moz-transition: 0.3s;
-  transition: 0.3s;
-}
+  transition: 0.3s; }
+
+.mrtop-10 {
+  margin-top: 10px; }
 
 .title {
   color: #000;
   font-size: 16px;
   font-weight: bold;
-}
-.title__form {
-  font-size: 14px;
-  color: #192a80;
-  margin-top: 17px;
-}
-.title__form::after {
-  display: none;
-}
-.title__form:first-child {
-  margin: 0;
-}
+  z-index: -9999; }
+  .title__form {
+    font-size: 14px;
+    color: #192a80;
+    margin-top: 17px;
+    z-index: -9999; }
+    .title__form::after {
+      display: none; }
+    .title__form:first-child {
+      margin: 0; }
+  .title__nth {
+    margin-top: 33px; }
 
 /*# sourceMappingURL=style.css.map */

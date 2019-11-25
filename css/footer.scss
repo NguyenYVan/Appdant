@@ -1,6 +1,8 @@
 $colormain: #192a80;
 .footer {
+  background-color: #fff;
   box-shadow: -5px 2px 20px rgba(0,0,0,0.6);
+  z-index: 9999;
   &__nav {
     padding: 0;
     margin: 0;

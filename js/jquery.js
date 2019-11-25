@@ -21,4 +21,11 @@ $(document).ready(function () {
     $("body").removeClass("menuactive");
     $(".header__title").removeClass("left65");
   });
+  // select
+  $(".select__input").focus(function () { 
+    $(this.nextElementSibling).addClass("active");
+  });
+  $(".select__input").blur(function () { 
+    $(".select").removeClass("active");
+  });
 });

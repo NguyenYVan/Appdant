@@ -13,10 +13,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   color: #fff;
   font: {
     family: 'Source Sans Pro';
@@ -25,7 +26,6 @@ body {
   }
   transition: 0.3s;
   &.menuactive {
-    position: relative;
     margin-left: 160px;
    .menu {
      left: 0;
@@ -38,14 +38,19 @@ body {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
+.mrtop-10 {
+  margin-top: 10px;
+}
 .title {
   color: #000;
   font-size: 16px;
   font-weight: bold;
+  z-index: -9999;
   &__form {
     font-size: 14px;
     color: $colormain;
     margin-top: 17px;
+    z-index: -9999;
     &::after {
       display: none;
     }
@@ -53,4 +58,7 @@ body {
       margin: 0;
     }
   }
+ &__nth {
+   margin-top: 33px;
+ }
 }
