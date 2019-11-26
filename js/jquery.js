@@ -28,4 +28,17 @@ $(document).ready(function () {
   $(".select__input").blur(function () { 
     $(".select").removeClass("active");
   });
+  // footer
+  $("#nhaplieu").click(function () { 
+    $(".ketqua").hide(0,function () {
+      $(".nhaplieu").fadeIn(500);
+    });
+    return;
+  });
+  $("#ketqua").click(function () { 
+    $(".nhaplieu").hide(0,function () {
+      $(".ketqua").fadeIn(500);
+    });
+    return;
+  });
 });

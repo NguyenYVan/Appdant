@@ -77,4 +77,9 @@ body {
 .btn {
   background-color: $colormain;
   color: #fff;
+  z-index: -9999;
+  &:hover {
+    color: #fff;
+    opacity: 0.8;
+  }
 }

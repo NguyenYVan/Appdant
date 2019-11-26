@@ -21,7 +21,12 @@ $colormain2: #770000;
 			height: 2px;
 			background-color: #000;
 		}
-	}
+  }
+  .ketqua {
+    .title {
+      margin-top: 0;
+    }
+  }
 }
 .form {
 	padding: 0 25px;
@@ -88,4 +93,25 @@ $colormain2: #770000;
 }
 .savedata__btn {
 	margin: 25px 25px 0 0;
+}
+.tablewrap {
+  overflow-x: scroll;
+  .title {
+    position: fixed;
+    top: 120px;
+    color: $colormain;
+    span {
+      color: $colormain2;
+    }
+  }
+  .table {
+    padding: 0 25px;
+    margin-top: 10px;
+    color: #000;
+    overflow: auto;
+    &__header, th, td {
+      color: $colormain;
+      border: solid 1px #770000;
+    }
+  }
 }

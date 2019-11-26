@@ -66,6 +66,10 @@ body {
 
 .btn {
   background-color: #192a80;
-  color: #fff; }
+  color: #fff;
+  z-index: -9999; }
+  .btn:hover {
+    color: #fff;
+    opacity: 0.8; }
 
 /*# sourceMappingURL=style.css.map */
