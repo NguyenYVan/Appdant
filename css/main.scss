@@ -97,8 +97,6 @@ $colormain2: #770000;
 .tablewrap {
   overflow-x: scroll;
   .title {
-    position: fixed;
-    top: 120px;
     color: $colormain;
     span {
       color: $colormain2;
@@ -106,7 +104,6 @@ $colormain2: #770000;
   }
   .table {
     padding: 0 25px;
-    margin-top: 10px;
     color: #000;
     overflow: auto;
     &__header, th, td {

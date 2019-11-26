@@ -76,14 +76,11 @@
 .tablewrap {
   overflow-x: scroll; }
   .tablewrap .title {
-    position: fixed;
-    top: 120px;
     color: #192a80; }
     .tablewrap .title span {
       color: #770000; }
   .tablewrap .table {
     padding: 0 25px;
-    margin-top: 10px;
     color: #000;
     overflow: auto; }
     .tablewrap .table__header, .tablewrap .table th, .tablewrap .table td {
