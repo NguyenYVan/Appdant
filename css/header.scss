@@ -12,7 +12,13 @@
       top: 50%;
       left: 50%;
       z-index: 0;
-     &.left65 {
+      .icon {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: calc(50% + 50px);
+      }
+      &.left65 {
        left: 65%;
      }
     }

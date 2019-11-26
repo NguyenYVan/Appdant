@@ -11,6 +11,17 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0; }
 
+sub, sup {
+  z-index: -9999; }
+
+.clearfix {
+  position: relative; }
+  .clearfix::after {
+    position: absolute;
+    content: "";
+    display: table;
+    clear: both; }
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth; }
@@ -52,5 +63,9 @@ body {
       margin: 0; }
   .title__nth {
     margin-top: 33px; }
+
+.btn {
+  background-color: #192a80;
+  color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,11 @@
     top: 50%;
     left: 50%;
     z-index: 0; }
+    .header__title .icon {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: calc(50% + 50px); }
     .header__title.left65 {
       left: 65%; }
   .header .navbar {
