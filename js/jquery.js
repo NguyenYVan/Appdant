@@ -28,17 +28,29 @@ $(document).ready(function () {
   $(".select__input").blur(function () { 
     $(".select").removeClass("active");
   });
+  $(".select__item").click(function () { 
+    $(this).parents(".form__item").children("input").val($(this).text());
+    if($(this).text() === "cct34") {
+      $("#txt__steel__cuongdott").val("2000");
+    } else if ($(this).text() === "cct38") {
+      $("#txt__steel__cuongdott").val("2200");
+    } else {
+      $("#txt__steel__cuongdott").val("2400");
+    }
+  });
   // footer
   $("#nhaplieu").click(function () { 
     $(".ketqua").hide(0,function () {
       $(".nhaplieu").fadeIn(500);
     });
+    $(".header__title").html("nhập liệu <img src=\"./img/icons/pencil-512w.png\" class=\"icon\"\>");
     return;
   });
   $("#ketqua").click(function () { 
     $(".nhaplieu").hide(0,function () {
       $(".ketqua").fadeIn(500);
     });
+    $(".header__title").html("kết quả");
     return;
   });
 });

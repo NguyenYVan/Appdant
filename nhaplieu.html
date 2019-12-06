@@ -22,49 +22,49 @@
             <button class="menu__close"></button>
           </div>
         </nav>
-        <span class="header__title text-capitalize transition03s">nhập liệu <img src="./img/icons/pencil-512w.png" class="icon" alt=""></span>
+        <span class="header__title text-capitalize transition03s">nhập liệu<img src="./img/icons/pencil-512w.png" class="icon" alt=""></span>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <div class="nhaplieu wow fadeInLeft collapse">
+        <div class="nhaplieu wow fadeInLeft">
           <h2 class="title text-capitalize wow fadeInLeft">nội lực</h2>
           <form action="" class="form">
             <h3 class="title title__form text-capitalize">tải trọng gió tính toán</h3>
             <div class="form__wrap d-flex">
               <div class="form__item">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" value="2700000">
               </div>
               <div class="form__item">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" value="4300">
               </div>
               <div class="form__item">
                 <label for="#" class="form__label">V(<span>daN</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" value="4500">
               </div>
             </div>
             <h3 class="title title__form text-capitalize">tĩnh tải tính toán</h3>
             <div class="form__wrap d-flex">
               <div class="form__item">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" value="0">
               </div>
               <div class="form__item">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" value="-5000">
               </div>
             </div>
             <h3 class="title title__form text-capitalize">hoạt tải tính toán</h3>
             <div class="form__wrap d-flex">
               <div class="form__item">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" value="0">
               </div>
               <div class="form__item">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" value="-2500">
               </div>
             </div>
           </form>
@@ -74,80 +74,82 @@
             <div class="form__wrap d-flex flex-wrap">
               <div class="form__item w-100">
                 <label for="#" class="form__label">Mác thép(<span>*</span>)</label>
-                <input type="text" class="form-control select__input" readonly>
+                <input type="text" id="cbb__select__steel" class="form-control select__input text-uppercase" readonly value="cct34">
                 <div class="select">
                   <img src="./img/icons/angle-down-512.png" class="icon select__icon transition03s" alt="">
                   <ul class="select__nav bg-danger transition03s">
-                    <li class="select__item">item 1</li>
-                    <li class="select__item">item 2</li>
-                    <li class="select__item">item 3</li>
+                    <li class="select__item text-uppercase">cct34</li>
+                    <li class="select__item text-uppercase">cct38</li>
+                    <li class="select__item text-uppercase">cct42</li>
                   </ul>
                 </div>
               </div>
               <div class="form__item w-100 mrtop-10">
                 <label for="#" class="form__label">Cường độ tính toán(<span>daN/cm<sup>2</sup></span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" id="txt__steel__cuongdott" class="form-control" disabled>
               </div>
             </div>
             <h3 class="title title__form text-capitalize">đặc điểm cơ lý của bê tông</h3>
             <div class="form__wrap d-flex flex-wrap">
               <div class="form__item w-100">
                 <label for="#" class="form__label">Mác bêtông(<span>*</span>)</label>
-                <input type="text" class="form-control select__input" readonly>
+                <input type="text" id="cbb__select__concrete" class="form-control select__input text-uppercase" readonly value="b15">
                 <div class="select">
                   <img src="./img/icons/angle-down-512.png" class="icon select__icon transition03s" alt="">
                   <ul class="select__nav bg-danger transition03s">
-                    <li class="select__item">item 1</li>
-                    <li class="select__item">item 2</li>
-                    <li class="select__item">item 3</li>
+                    <li class="select__item text-uppercase">b15</li>
+                    <li class="select__item text-uppercase">b20</li>
+                    <li class="select__item text-uppercase">b25</li>
                   </ul>
                 </div>
               </div>
               <div class="form__item w-50 mrtop-10">
+                <!-- Rb cường độ chịu nén -->
                 <label for="#" class="form__label">R<sub>b</sub>(<span>daN/cm<sup>2</sup></span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" id="txt__concrete__rb" class="form-control" disabled>
               </div>
               <div class="form__item w-50 mrtop-10">
+                <!-- Rbt cường độ chịu kéo -->
                 <label for="#" class="form__label">R<sub>bt</sub>(<span>daN/cm<sup>2</sup></span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" id="txt__concrete__rbt" class="form-control" disabled>
               </div>
             </div>
             <h3 class="title title__form text-capitalize">đặc điểm cơ lý của bu lông</h3>
             <div class="form__wrap d-flex flex-wrap">
               <div class="form__item w-100">
                 <label for="#" class="form__label">Mác bulông(<span>*</span>)</label>
-                <input type="text" class="form-control select__input" readonly>
+                <input type="text" id="cbb__select__bold" class="form-control select__input text-uppercase" readonly value="ct38">
                 <div class="select">
                 <img src="./img/icons/angle-down-512.png" class="icon select__icon transition03s" alt="">
                   <ul class="select__nav bg-danger transition03s">
-                    <li class="select__item">item 1</li>
-                    <li class="select__item">item 2</li>
-                    <li class="select__item">item 3</li>
+                    <li class="select__item text-uppercase">ct38</li>
+                    <li class="select__item text-uppercase">16mnsi</li>
+                    <li class="select__item text-uppercase">09mn2si</li>
                   </ul>
                 </div>
               </div>
             <div class="form__item w-100 mrtop-10">
               <label for="#" class="form__label">Cường độ chịu kéo(<span>daN/cm<sup>2</sup></span>)</label>
-              <input type="text" class="form-control">
+              <input type="text" id="txt__bold__cuongdochiukeo" class="form-control" disabled>
             </div>
             </div>
             <h3 class="title title__form text-capitalize">phương pháp hàn</h3>
             <div class="form__wrap d-flex flex-wrap">
               <div class="form__item w-100">
                 <label for="#" class="form__label">Que hàn(<span>*</span>)</label>
-                <input type="text" class="form-control select__input" readonly>
+                <input type="text" id="cbb__select__weld" class="form-control select__input text-uppercase" readonly value="n42">
                 <div class="select">
                   <img src="./img/icons/angle-down-512.png" class="icon select__icon transition03s" alt="">
                   <ul class="select__nav bg-danger transition03s">
-                    <li class="select__item">item 1</li>
-                    <li class="select__item">item 2</li>
-                    <li class="select__item">item 3</li>
+                    <li class="select__item text-uppercase">n42</li>
+                    <li class="select__item text-uppercase">n46</li>
+                    <li class="select__item text-uppercase">n50</li>
                   </ul>
                 </div>
               </div>
               <div class="form__item w-100 mrtop-10">
                 <label for="#" class="form__label">Cường độ tính toán(<span>daN/cm<sup>2</sup></span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" id="txt__weld__cuongdott" class="form-control" disabled>
               </div>
             </div>
           </form>
@@ -156,28 +158,27 @@
             <div class="form__wrap d-flex">
               <div class="form__item w-25">
                 <label for="#" class="form__label">b(<span>cm</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" id="txt__section__berong" class="form-control" value="0">
               </div>
               <div class="form__item w-25">
                 <label for="#" class="form__label">h(<span>cm</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" id="txt__section__chieucao" class="form-control" value="0">
               </div>
               <div class="form__item w-25">
                 <label for="#" class="form__label">t<sub>w</sub>(<span>cm</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" id="txt__section__daybung" class="form-control" value="0">
               </div>
               <div class="form__item w-25">
                 <label for="#" class="form__label">t<sub>f</sub>(<span>cm</span>)</label>
-                <input type="text" class="form-control">
+                <input type="text" id="txt__section__daycanh" class="form-control" value="0">
               </div>
             </div>
-            <svg class="form__view">
-
+            <svg class="svg__section" id="mysvg" width="240" height="300">
             </svg>
           </form>
           <a href="#" class="btn savedata__btn text-capitalize float-right clearfix">lưu dữ liệu</a>
         </div>
-        <div class="ketqua wow fadeInLeft">
+        <div class="ketqua wow fadeInLeft collapse">
           <h2 class="title title__nth vatlieu__title text-capitalize wow fadeInLeft">kết quả tính toán thiết kế</h2>
           <form action="" class="form">
             <div class="tablewrap">
@@ -234,7 +235,7 @@
           <a href="#" class="footer__link d-block text-center text-capitalize">trang chủ</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link d-block text-center text-capitalize" id="nhaplieu">nhập liệu</a>
+          <a href="#" class="footer__link d-block text-center text-capitalize disabled" id="nhaplieu">nhập liệu</a>
         </li>
         <li class="footer__item">
           <a href="#" class="footer__link d-block text-center text-capitalize" id="ketqua">kết quả</a>
@@ -249,5 +250,7 @@
     <script src="./js/swiper.min.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/jquery.js"></script>
+    <script src="./js/dataload.js"></script>
+    <script src="./js/drawsection.js"></script>
   </body>
 </html>

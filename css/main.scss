@@ -58,6 +58,16 @@ $colormain2: #770000;
 		border-radius: 5px;
 		margin-top: 25px;
 	}
+	.svg {
+		&__section {
+		  border: solid 1px $colormain;
+			border-radius: 5px;
+			margin-top: 25px;
+		}
+	}
+	.form-control:disabled, .form-control[readonly] {
+		background-color: transparent;
+	}
 }
 .select {
 		position: relative;

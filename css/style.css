@@ -7,6 +7,9 @@
 @import url(header.css);
 @import url(main.css);
 @import url(footer.css);
+* {
+  box-sizing: border-box; }
+
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0; }
@@ -71,5 +74,12 @@ body {
   .btn:hover {
     color: #fff;
     opacity: 0.8; }
+
+svg {
+  stroke: #192a80;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none; }
 
 /*# sourceMappingURL=style.css.map */
