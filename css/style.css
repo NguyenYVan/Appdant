@@ -74,6 +74,8 @@ body {
   .btn:hover {
     color: #fff;
     opacity: 0.8; }
+  .btn.savedata__btn {
+    z-index: 0; }
 
 svg {
   stroke: #192a80;

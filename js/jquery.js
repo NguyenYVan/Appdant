@@ -30,13 +30,6 @@ $(document).ready(function () {
   });
   $(".select__item").click(function () { 
     $(this).parents(".form__item").children("input").val($(this).text());
-    if($(this).text() === "cct34") {
-      $("#txt__steel__cuongdott").val("2000");
-    } else if ($(this).text() === "cct38") {
-      $("#txt__steel__cuongdott").val("2200");
-    } else {
-      $("#txt__steel__cuongdott").val("2400");
-    }
   });
   // footer
   $("#nhaplieu").click(function () { 

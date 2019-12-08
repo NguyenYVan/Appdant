@@ -34,37 +34,37 @@
             <div class="form__wrap d-flex">
               <div class="form__item">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
-                <input type="text" class="form-control" value="2700000">
+                <input type="text" id="noiluc_taigio_momen" class="form-control" value="2700000">
               </div>
               <div class="form__item">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" class="form-control" value="4300">
+                <input type="text" id="noiluc_taigio_lucnen" class="form-control" value="4300">
               </div>
               <div class="form__item">
                 <label for="#" class="form__label">V(<span>daN</span>)</label>
-                <input type="text" class="form-control" value="4500">
+                <input type="text" id="noiluc_taigio_luccat" class="form-control" value="4500">
               </div>
             </div>
             <h3 class="title title__form text-capitalize">tĩnh tải tính toán</h3>
             <div class="form__wrap d-flex">
               <div class="form__item">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
-                <input type="text" class="form-control" value="0">
+                <input type="text" id="noiluc_tinhtai_momen" class="form-control" value="0">
               </div>
               <div class="form__item">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" class="form-control" value="-5000">
+                <input type="text" id="noiluc_tinhtai_lucnen" class="form-control" value="-5000">
               </div>
             </div>
             <h3 class="title title__form text-capitalize">hoạt tải tính toán</h3>
             <div class="form__wrap d-flex">
               <div class="form__item">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
-                <input type="text" class="form-control" value="0">
+                <input type="text" id="noiluc_hoattai_momen" class="form-control" value="0">
               </div>
               <div class="form__item">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" class="form-control" value="-2500">
+                <input type="text" id="noiluc_hoattai_lucnen" class="form-control" value="-2500">
               </div>
             </div>
           </form>
@@ -176,7 +176,7 @@
             <svg class="svg__section" id="mysvg" width="240" height="300">
             </svg>
           </form>
-          <a href="#" class="btn savedata__btn text-capitalize float-right clearfix">lưu dữ liệu</a>
+          <button id="btn__tinhtoan" class="btn savedata__btn text-capitalize float-right clearfix">lưu và tính</button>
         </div>
         <div class="ketqua wow fadeInLeft collapse">
           <h2 class="title title__nth vatlieu__title text-capitalize wow fadeInLeft">kết quả tính toán thiết kế</h2>
@@ -252,5 +252,6 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/dataload.js"></script>
     <script src="./js/drawsection.js"></script>
+    <script src="./js/tinhtoan.js"></script>
   </body>
 </html>
