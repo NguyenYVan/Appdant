@@ -47,6 +47,7 @@ $(document).ready(function () {
 		$("#mysvg").empty();
 		$("#mysvg").html(html);
 	}
+	drawSection();
 	$("#txt__section__berong").change(function () {
 		drawSection();
 	});
