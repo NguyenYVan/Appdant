@@ -59,10 +59,27 @@ $colormain2: #770000;
 		margin-top: 25px;
 	}
 	.svg {
-		&__section {
-		  border: solid 1px $colormain;
+		&__wrap {
+			position: relative;
+			width: 100%;
+			height: 300px;
+			border: solid 1px $colormain;
 			border-radius: 5px;
 			margin-top: 25px;
+			overflow: scroll;
+			-webkit-appearance: none;
+		}
+		&__wrap::-webkit-scrollbar {
+			display: none;
+		}
+		&__section {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+		}
+		&__rotate90 {
+			transform: translate(-50%, -50%) rotate(90deg);
 		}
 	}
 	.form-control:disabled, .form-control[readonly] {
