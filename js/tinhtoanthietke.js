@@ -303,7 +303,7 @@ $(document).ready(function () {
 			suondobulong.cDay = 1;
 			suondobulong.cCao = damde.cCao;
 			// chọn chiều dài cánh tay đòn. Coi sườn đỡ buloong làm việc như dầm console ngàm vào dầm đế
-			var LSuonDoBl = 8 + (bande.cDai - cot_cCao)/2 - damde.cDay;
+			var LSuonDoBl = 10 + (bande.cDai - cot_cCao)/2 - damde.cDay;
 			suondobulong.cRong = LSuonDoBl;
 			// momen tác dụng nên sườn
 			suondobulong.momen = bulongneo.Nbl*LSuonDoBl;

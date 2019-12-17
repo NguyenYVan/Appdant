@@ -74,12 +74,15 @@ $colormain2: #770000;
 		}
 		&__section {
 			position: absolute;
-			transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%) scale(2);
 			top: 50%;
 			left: 50%;
 		}
 		&__rotate90 {
 			transform: translate(-50%, -50%) rotate(90deg);
+		}
+		&__scale {
+			transform: translate(-50%, 0%) scale(2) rotate(-90deg);
 		}
 	}
 	.form-control:disabled, .form-control[readonly] {

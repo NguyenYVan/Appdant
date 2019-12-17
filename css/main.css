@@ -56,11 +56,13 @@
     display: none; }
   .form .svg__section {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(2);
     top: 50%;
     left: 50%; }
   .form .svg__rotate90 {
     transform: translate(-50%, -50%) rotate(90deg); }
+  .form .svg__scale {
+    transform: translate(-50%, 0%) scale(2) rotate(-90deg); }
   .form .form-control:disabled, .form .form-control[readonly] {
     background-color: transparent; }
 
