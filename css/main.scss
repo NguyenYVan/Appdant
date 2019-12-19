@@ -1,11 +1,11 @@
 $colormain: #192a80;
 $colormain2: #770000;
 .main {
-  padding: 83px 0 160px;
+  padding: 83px 0 80px;
   z-index: -9999;
   .title {
 		position: relative;
-		display: inline-block;
+    display: inline-block;
 		.icon {
 			position: absolute;
 			transform: translate(-50%, -50%);
@@ -21,12 +21,63 @@ $colormain2: #770000;
 			height: 2px;
 			background-color: #000;
 		}
-  }
+	}
+	.trangchu {
+		&__intro {
+			font-size: 14px;
+			position: relative;
+		}
+		&__caption {
+			position: absolute;
+			transform: translate(-50%,-50%);
+			width: 100%;
+			top: 50%;
+			left: 50%;
+			color: $colormain;
+		}
+		.content {
+			margin-top: 30px;
+			color: $colormain;
+			&__item {
+				color: inherit;
+				font-weight: bold;
+			}
+		}
+	}
   .ketqua {
     .title {
       margin-top: 0;
     }
-  }
+	}
+	.cosolythuyet {
+		position: fixed;
+		padding: 16px 20px;
+		overflow-y: scroll;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%,0);
+		height: 70%;
+		width: 70%;
+		background-color: #fff;
+		box-shadow: 2px 2px 20px rgba($color: #000000, $alpha: 0.8);
+		z-index: 999999;
+		&__content {
+			margin-top: 10px;
+		}
+		&__close {
+			&::after,&::before {
+				background-color: #000000;
+			}
+		}
+	}
+	.baocao {
+		.tablewrap {
+			margin-top: 20px;
+		}
+	}
+	.cosolythuyet::-webkit-scrollbar {
+		display: none;
+	}
 }
 .form {
 	padding: 0 25px;
@@ -63,8 +114,6 @@ $colormain2: #770000;
 			position: relative;
 			width: 100%;
 			height: 300px;
-			border: solid 1px $colormain;
-			border-radius: 5px;
 			margin-top: 25px;
 			overflow: scroll;
 			-webkit-appearance: none;

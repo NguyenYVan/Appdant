@@ -11,11 +11,13 @@ button {
 .menu {
   position: fixed;
   top: 0;
-  left: -160px;
-  width: 160px;
+  left: -100%;
+  width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1; }
+  padding: 8px;
+  background-color: #000;
+  opacity: 1;
+  z-index: 9999; }
   .menu .navbar-nav {
     position: relative;
     padding: 50px 0; }
@@ -25,22 +27,46 @@ button {
       .menu .navbar-nav .navbar-link:hover {
         text-decoration: none;
         color: rgba(255, 255, 255, 0.8); }
-  .menu__close {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 10px;
-    right: 10px; }
-    .menu__close::before, .menu__close::after {
+  .menu__title {
+    position: relative;
+    font-weight: bold;
+    margin-top: 30px; }
+    .menu__title::after {
       position: absolute;
-      content: "";
-      top: 50%;
-      right: -50%;
-      height: 3px;
-      width: 25px;
-      background-color: #fff;
-      transform: translate(-50%, -50%) rotate(45deg); }
-    .menu__close::after {
-      transform: translate(-50%, -50%) rotate(-45deg); }
+      content: '';
+      display: block;
+      bottom: 0;
+      left: 50%;
+      height: 1px;
+      width: 150px;
+      transform: translate(-50%, -50%);
+      background-color: #fff; }
+
+.btn__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 10px; }
+  .btn__close::before, .btn__close::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -50%;
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    transform: translate(-50%, -50%) rotate(45deg); }
+  .btn__close::after {
+    transform: translate(-50%, -50%) rotate(-45deg); }
+
+.menusub {
+  list-style-type: none;
+  padding-left: 0; }
+  .menusub__link {
+    color: #fff;
+    font-size: 14px; }
+    .menusub__link:hover {
+      color: #fff; }
 
 /*# sourceMappingURL=menubar.css.map */

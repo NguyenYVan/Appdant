@@ -11,60 +11,91 @@
     <header class="header">
       <div class="container">
         <nav class="navbar">
-          <button class="menubar"><img src="./img/menubar-clwhite.png" class="menubar__img" alt=""></button>
-          <div class="menu transition03s">
+          <button class="menubar collapse"><img src="./img/menubar-clwhite.png" class="menubar__img" alt=""></button>
+          <div class="menu transition03s text-center">
             <ul class="navbar-nav">
-              <li class="nav-item"><a href="#" class="navbar-link d-block text-capitalize">tạo mới</a></li>
-              <li class="nav-item"><a href="#" class="navbar-link d-block text-capitalize">mở file</a></li>
-              <li class="nav-item"><a href="#" class="navbar-link d-block text-capitalize">lưu file</a></li>
-              <li class="nav-item"><a href="#" class="navbar-link d-block text-capitalize">thoát</a></li>
+              <li class="nav-item menu__title text-uppercase">cơ sở lý thuyết</li>
+              <li class="nav-item"><a class="navbar-link cslt__bande d-block text-capitalize" href="#">bản đế</a></li>
+              <li class="nav-item"><a class="navbar-link cslt__damde d-block text-capitalize" href="#">dầm đế</a></li>
+              <li class="nav-item"><a class="navbar-link cslt__suonngan d-block text-capitalize" href="#">sườn ngăn bản đế</a></li>
+              <li class="nav-item"><a class="navbar-link cslt__bulong d-block text-capitalize" href="#">bulong neo</a></li>
+              <li class="nav-item"><a class="navbar-link cslt__suondo d-block text-capitalize" href="#">sườn đỡ bulong</a></li>
+              <li class="nav-item menu__title text-uppercase">kết quả tính toán</li>
+              <li class="nav-item"><a href="#" class="navbar-link ketquatinhtoan d-block text-capitalize">tính toán</a></li>
             </ul>
-            <button class="menu__close"></button>
+            <button class="btn__close menu__close"></button>
           </div>
         </nav>
-        <span class="header__title text-capitalize transition03s">nhập liệu<img src="./img/icons/pencil-512w.png" class="icon" alt=""></span>
+        <span class="header__title text-capitalize transition03s">trang chủ</span>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <div class="nhaplieu wow fadeInLeft">
+        <div class="trangchu wow fadeInLeft">
+          <div class="swiper-container d-block">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="trangchu__intro w-100 h-100">
+                  <img src="./img/trang chu/bgintro.png" class="swiper__img d-block img-fluid" alt="">
+                  <div class="trangchu__caption">
+                    <h2 class="trangchu__title text-capitalize wow fadeInDown">đề tài</h2>
+                    <p class="text-uppercase">"phát triển phần mềm tính toán và thiết kế liên kết ngàm chân cột thép với móng"</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"><img src="./img/trang chu/img1.png" class="swiper__img d-block img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="./img/trang chu/img3.png" class="swiper__img d-block img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="./img/trang chu/img4.png" class="swiper__img d-block img-fluid" alt=""></div>
+            </div>
+          </div>
+            <!-- Add Pagination -->
+          <div class="swiper-pagination d-block"></div>
+          <div class="content">
+            <p class="content__item text-uppercase">giáo viên hướng dẫn: <span class="content__name">phan thái trung</span></p>
+            <p class="content__item text-uppercase">sinh viên thực hiện: <span class="content__name">nguyễn văn đức</span></p>
+            <p class="content__item text-uppercase">mssv: <span class="content__name">3052459</span></p>
+            <p class="content__item text-uppercase">lớp: <span class="content__name">59th1</span></p>
+            <p class="content__item text-uppercase">sdt: <span class="content__name">0362046911</span></p>
+          </div>
+        </div>
+        <div class="nhaplieu wow fadeInLeft collapse">
           <h2 class="title text-capitalize wow fadeInLeft">nội lực</h2>
           <form action="" class="form">
             <h3 class="title title__form text-capitalize">tải trọng gió tính toán</h3>
             <div class="form__wrap d-flex">
-              <div class="form__item">
+              <div class="form__item w-100">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
-                <input type="text" id="noiluc_taigio_momen" class="form-control" value="656610">
+                <input type="text" id="noiluc_taigio_momen" class="form-control" value="2700000">
               </div>
-              <div class="form__item">
+              <div class="form__item w-100">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" id="noiluc_taigio_lucnen" class="form-control" value="169200">
+                <input type="text" id="noiluc_taigio_lucnen" class="form-control" value="4300">
               </div>
-              <div class="form__item">
+              <div class="form__item w-100">
                 <label for="#" class="form__label">V(<span>daN</span>)</label>
-                <input type="text" id="noiluc_taigio_luccat" class="form-control" value="0">
+                <input type="text" id="noiluc_taigio_luccat" class="form-control" value="4500">
               </div>
             </div>
             <h3 class="title title__form text-capitalize">tĩnh tải tính toán</h3>
             <div class="form__wrap d-flex">
-              <div class="form__item">
+              <div class="form__item w-100">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
                 <input type="text" id="noiluc_tinhtai_momen" class="form-control" value="0">
               </div>
-              <div class="form__item">
+              <div class="form__item w-100">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" id="noiluc_tinhtai_lucnen" class="form-control" value="0">
+                <input type="text" id="noiluc_tinhtai_lucnen" class="form-control" value="-5000">
               </div>
             </div>
             <h3 class="title title__form text-capitalize">hoạt tải tính toán</h3>
             <div class="form__wrap d-flex">
-              <div class="form__item">
+              <div class="form__item w-100">
                 <label for="#" class="form__label">M(<span>daN.cm</span>)</label>
                 <input type="text" id="noiluc_hoattai_momen" class="form-control" value="0">
               </div>
-              <div class="form__item">
+              <div class="form__item w-100">
                 <label for="#" class="form__label">N(<span>daN</span>)</label>
-                <input type="text" id="noiluc_hoattai_lucnen" class="form-control" value="0">
+                <input type="text" id="noiluc_hoattai_lucnen" class="form-control" value="-2500">
               </div>
             </div>
           </form>
@@ -178,7 +209,6 @@
               </svg>
             </div>
           </form>
-          <button id="btn__tinhtoan" class="btn savedata__btn text-capitalize float-right clearfix">lưu và tính</button>
         </div>
         <div class="ketqua wow fadeInLeft collapse">
           <h2 class="title title__nth vatlieu__title text-capitalize wow fadeInLeft">kết quả tính toán thiết kế</h2>
@@ -211,7 +241,7 @@
                 </tr>
                 <tr class="thuy">
                 </tr>
-            </table>
+              </table>
             </div>
             <button type="button" id="btn__ve" class="btn savedata__btn text-capitalize">vẽ</button>
             <div class="svg__wrap">
@@ -220,15 +250,169 @@
             </div>
           </form>
         </div>
+        <div class="baocao collapse">
+          <div class="baocao__noiluc">
+            <h2 class="title text-capitalize wow fadeInLeft">nội lực tác dụng</h2>
+            <div class="tablewrap">
+              <table class="table w-100 text-center">
+                <tr>
+                  <th class="table__header text-capitalize">momen</th>
+                  <th class="table__header text-capitalize">lực nén</th>
+                  <th class="table__header text-capitalize">lực cắt</th>
+                </tr>
+                <tr class="baocao__noiluctacdung">
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="baocao__bande">
+            <h2 class="title text-capitalize wow fadeInLeft">tính toán bản đế</h2>
+            <div class="tablewrap">
+              <table class="table w-100 text-center">
+                <tr>
+                  <th class="table__header text-capitalize">chiều dài</th>
+                  <th class="table__header text-capitalize">chiều rộng</th>
+                  <th class="table__header text-capitalize">chiều dày</th>
+                  <th class="table__header text-capitalize">momenMax ô bản</th>
+                  <th class="table__header text-capitalize">ứng suất max</th>
+                  <th class="table__header text-capitalize">ứng suất min</th>
+                  <th class="table__header text-capitalize">ứng suất ô bản1</th>
+                  <th class="table__header text-capitalize">y1</th>
+                </tr>
+                <tr class="baocao__tinhtoanbande">
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="baocao__damde">
+            <h2 class="title text-capitalize wow fadeInLeft">tính toán dầm đế</h2>
+            <div class="tablewrap">
+              <table class="table w-100 text-center">
+                <tr>
+                  <th class="table__header text-capitalize">lw</th>
+                  <th class="table__header text-capitalize">ndd</th>
+                  <th class="table__header text-capitalize">chiều cao</th>
+                  <th class="table__header text-capitalize">chiều rộng</th>
+                  <th class="table__header text-capitalize">chiều dày</th>
+                  <th class="table__header text-capitalize">chiều cao đường hàn</th>
+                  <th class="table__header text-capitalize">momen uốn</th>
+                  <th class="table__header text-capitalize">sigMa dầm đế</th>
+                </tr>
+                <tr class="baocao__tinhtoandamde">
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="baocao__suonngan">
+            <h2 class="title text-capitalize wow fadeInLeft">tính toán sườn ngăn</h2>
+            <div class="tablewrap">
+              <table class="table w-100 text-center">
+                <tr>
+                  <th class="table__header text-capitalize">lw</th>
+                  <th class="table__header text-capitalize">chiều cao</th>
+                  <th class="table__header text-capitalize">chiều rộng</th>
+                  <th class="table__header text-capitalize">chiều dày</th>
+                  <th class="table__header text-capitalize">chiều cao đường hàn</th>
+                  <th class="table__header text-capitalize">momen</th>
+                  <th class="table__header text-capitalize">lực cắt</th>
+                  <th class="table__header text-capitalize">q tải phân bố</th>
+                  <th class="table__header text-capitalize">ứng suất đường hàn</th>
+                </tr>
+                <tr class="baocao__tinhtoansuonngan">
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="baocao__bulong">
+            <h2 class="title text-capitalize wow fadeInLeft">tính toán bu lông</h2>
+            <div class="tablewrap">
+              <table class="table w-100 text-center">
+                <tr>
+                  <th class="table__header text-capitalize">delta</th>
+                  <th class="table__header text-capitalize">abl</th>
+                  <th class="table__header text-capitalize">nbl</th>
+                  <th class="table__header text-capitalize">k/c tâm nén</th>
+                  <th class="table__header text-capitalize">đường kính</th>
+                </tr>
+                <tr class="baocao__tinhtoanbulong">
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="baocao__suondo">
+            <h2 class="title text-capitalize wow fadeInLeft">tính toán sườn đỡ</h2>
+            <div class="tablewrap">
+              <table class="table w-100 text-center">
+                <tr>
+                  <th class="table__header text-capitalize">chiều cao</th>
+                  <th class="table__header text-capitalize">chiều rộng</th>
+                  <th class="table__header text-capitalize">chiều dày</th>
+                  <th class="table__header text-capitalize">chiều cao đường hàn</th>
+                  <th class="table__header text-capitalize">diện tích đường hàn</th>
+                  <th class="table__header text-capitalize">momen</th>
+                  <th class="table__header text-capitalize">momen kháng uốn</th>
+                  <th class="table__header text-capitalize">sigma</th>
+                  <th class="table__header text-capitalize">ứng suất đường hàn</th>
+                </tr>
+                <tr class="baocao__tinhtoansuondo">
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="cosolythuyet collapse">
+          <div class="cosolythuyet__bande cosolythuyet__item collapse">
+            <h2 class="title text-capitalize wow fadeInLeft">bản đế</h2>
+              <div class="cosolythuyet__content">
+                <img src="./img/bande/bande0.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+                <img src="./img/bande/bande1.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+                <img src="./img/bande/bande2.png" class="img-fluid d-block" alt="" class="cosolythuyet__img">
+                <img src="./img/bande/bande3.png" class="img-fluid d-block" alt="" class="cosolythuyet__img">
+                <img src="./img/bande/bande4.png" class="img-fluid d-block" alt="" class="cosolythuyet__img">
+                <img src="./img/bande/bande5.png" class="img-fluid d-block" alt="" class="cosolythuyet__img">
+              </div>
+          </div>
+          <div class="cosolythuyet__damde cosolythuyet__item collapse">
+            <h2 class="title text-capitalize wow fadeInLeft">dầm đế</h2>
+              <div class="cosolythuyet__content">
+                <img src="./img/damde/damde0.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+              </div>
+          </div>
+          <div class="cosolythuyet__suonngan cosolythuyet__item collapse">
+            <h2 class="title text-capitalize wow fadeInLeft">sườn ngăn</h2>
+              <div class="cosolythuyet__content">
+                <img src="./img/suonngan/suonngan.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+              </div>
+          </div>
+          <div class="cosolythuyet__bulong cosolythuyet__item collapse">
+            <h2 class="title text-capitalize wow fadeInLeft">bu lông neo</h2>
+              <div class="cosolythuyet__content">
+                <img src="./img/bulong/bulong0.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+                <img src="./img/bulong/bulong1.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+                <img src="./img/bulong/bulong2.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+              </div>
+          </div>
+          <div class="cosolythuyet__suondo cosolythuyet__item collapse">
+            <h2 class="title text-capitalize wow fadeInLeft">sườn đỡ bu lông</h2>
+              <div class="cosolythuyet__content">
+                <img src="./img/suondobl/suondo0.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+                <img src="./img/suondobl/suondo1.png" class="img-fluid d-block m-auto" alt="" class="cosolythuyet__img">
+              </div>
+          </div>
+          <button class="cosolythuyet__close btn__close"></button>
+        </div>
       </div>
     </main>
     <footer class="footer fixed-bottom">
       <ul class="footer__nav d-flex">
         <li class="footer__item">
-          <a href="#" class="footer__link d-block text-center text-capitalize">trang chủ</a>
+          <a href="#" class="footer__link d-block text-center text-capitalize" id="trangchu">trang chủ</a>
         </li>
         <li class="footer__item">
           <a href="#" class="footer__link d-block text-center text-capitalize disabled" id="nhaplieu">nhập liệu</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link d-block text-center text-capitalize disabled" id="btn__tinhtoan">tính toán</a>
         </li>
         <li class="footer__item">
           <a href="#" class="footer__link d-block text-center text-capitalize" id="ketqua">kết quả</a>

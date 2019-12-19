@@ -1,6 +1,17 @@
 $(document).ready(function () {
   // swiper
-  var swiper = new Swiper('.swiper-container');
+  var swiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 9500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
   // wow
   wow = new WOW(
     {
@@ -14,12 +25,14 @@ $(document).ready(function () {
   wow.init();
   // menu
   $(".menubar").click(function () { 
-    $("body").addClass("menuactive");
+		$("body").addClass("menuactive");
+		$("html").css("overflow","hidden");
     $(".header__title").addClass("left65");
   });
   $(".menu__close").click(function () { 
-    $("body").removeClass("menuactive");
-    $(".header__title").removeClass("left65");
+		$("body").removeClass("menuactive");
+		$("html").css("overflow","auto");
+		$(".header__title").removeClass("left65");
   });
   // select
   $(".select__input").focus(function () { 
@@ -31,19 +44,83 @@ $(document).ready(function () {
   $(".select__item").click(function () { 
     $(this).parents(".form__item").children("input").val($(this).text());
   });
+  // cosolythuyet
+  $(".cslt__bande").click(function () {
+    menuClose();
+    $(".cosolythuyet").slideDown(100);
+    $(".cosolythuyet__item").addClass("collapse");
+    $(".cosolythuyet__bande").removeClass("collapse");
+  });
+  $(".cslt__damde").click(function () {
+    menuClose();
+    $(".cosolythuyet").slideDown(100);
+    $(".cosolythuyet__item").addClass("collapse");
+    $(".cosolythuyet__damde").removeClass("collapse");
+  });
+  $(".cslt__suonngan").click(function () {
+    menuClose();
+    $(".cosolythuyet").slideDown(100);
+    $(".cosolythuyet__item").addClass("collapse");
+    $(".cosolythuyet__suonngan").removeClass("collapse");
+  });
+  $(".cslt__bulong").click(function () {
+    menuClose();
+    $(".cosolythuyet").slideDown(100);
+    $(".cosolythuyet__item").addClass("collapse");
+    $(".cosolythuyet__bulong").removeClass("collapse");
+  });
+  $(".cslt__suondo").click(function () {
+    menuClose();
+    $(".cosolythuyet").slideDown(100);
+    $(".cosolythuyet__item").addClass("collapse");
+    $(".cosolythuyet__suondo").removeClass("collapse");
+  });
+  $(".cosolythuyet__close").click(function () { 
+    $(".cosolythuyet").slideUp(100);
+  });
   // footer
-  $("#nhaplieu").click(function () { 
-    $(".ketqua").hide(0,function () {
-      $(".nhaplieu").fadeIn(500);
-    });
+  function menuClose() {
+    $("body").removeClass("menuactive");
+		$("html").css("overflow","auto");
+		$(".header__title").removeClass("left65");
+  }
+  $("#trangchu").click(function () {
+    menuClose();
+    $(".menubar").hide();
+    $(".nhaplieu").hide();
+    $(".ketqua").hide();
+    $(".baocao").hide();
+    $(".trangchu").show();
+    $(".header__title").html("trang chủ");
+    return;
+  });
+  $("#nhaplieu").click(function () {
+    menuClose();
+    $(".trangchu").hide();
+    $(".ketqua").hide();
+    $(".baocao").hide();
+    $(".menubar").show()
+    $(".nhaplieu").show();
     $(".header__title").html("nhập liệu <img src=\"./img/icons/pencil-512w.png\" class=\"icon\"\>");
     return;
   });
-  $("#ketqua").click(function () { 
-    $(".nhaplieu").hide(0,function () {
-      $(".ketqua").fadeIn(500);
-    });
+  $("#ketqua").click(function () {
+    menuClose();
+    $(".trangchu").hide();
+    $(".nhaplieu").hide();
+    $(".baocao").hide();
+    $(".menubar").show()
+    $(".ketqua").show();
     $(".header__title").html("kết quả");
     return;
+  });
+  $(".ketquatinhtoan").click(function () { 
+    menuClose();
+    $(".trangchu").hide();
+    $(".nhaplieu").hide();
+    $(".ketqua").hide();
+    $(".menubar").show()
+    $(".baocao").show();
+    $(".header__title").html("báo cáo");
   });
 });

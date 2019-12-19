@@ -319,7 +319,7 @@ $(document).ready(function () {
 			suondobulong.ungSuatDuongHan = Math.sqrt(Math.pow(suondobulong.momen/suondobulong.momenKhangUon,2) 
 																	+ Math.pow(bulongneo.Nbl/suondobulong.dienTichDuongHan,2));
 		}
-		// ------------------------------------------------------------------
+		// ------------------------------------
 		// chuyển kết quả tính toán ra màn hình
 		var ketqua =[];
 		ketqua[0] = 1;
@@ -345,6 +345,83 @@ $(document).ready(function () {
 		}
 		$(".thuy").html(ketqua.join());
 		// ------------------------------------------------------------------
-		// lưu kết quả tính toán ra file text or excel.
+		// baocao noi luc.
+		var baoCaoNoiLuc = [];
+		baoCaoNoiLuc[0] = noiluc.momen;
+		baoCaoNoiLuc[1] = noiluc.lucnen;
+		baoCaoNoiLuc[2] = noiluc.luccat;
+		for(i = 0; i < baoCaoNoiLuc.length;i++){
+			baoCaoNoiLuc[i] = "<td class=\"table__baocao\">" + baoCaoNoiLuc[i] + "</td>";
+		}
+		$(".baocao__noiluctacdung").html(baoCaoNoiLuc.join());
+		// baocao tính toán bản đế.
+		var baoCaoBanDe = [];
+		baoCaoBanDe[0] = bande.cDai;
+		baoCaoBanDe[1] = bande.cRong;
+		baoCaoBanDe[2] = bande.cDay;
+		baoCaoBanDe[3] = Math.round(bande.momenMaxOBan);
+		baoCaoBanDe[4] = bande.ungSuatMax;
+		baoCaoBanDe[5] = bande.ungSuatMin;
+		baoCaoBanDe[6] = Math.round(bande.sigmaOBan1);
+		baoCaoBanDe[7] = bande.y1;
+		for(i = 0; i < baoCaoBanDe.length;i++){
+			baoCaoBanDe[i] = "<td class=\"table__baocao\">" + baoCaoBanDe[i] + "</td>";
+		}
+		$(".baocao__tinhtoanbande").html(baoCaoBanDe.join());
+		// baocao tính toán dầm đế.
+		var baoCaoDamDe = [];
+		baoCaoDamDe[0] = damde.Lw;
+		baoCaoDamDe[1] = damde.Ndd;
+		baoCaoDamDe[2] = damde.cCao;
+		baoCaoDamDe[3] = damde.cRong
+		baoCaoDamDe[4] = damde.cDay
+		baoCaoDamDe[5] = damde.cCaoDuongHan
+		baoCaoDamDe[6] = damde.momenUon
+		baoCaoDamDe[7] = Math.round(damde.sigMaDamDe);
+		for(i = 0; i < baoCaoDamDe.length;i++){
+			baoCaoDamDe[i] = "<td class=\"table__baocao\">" + baoCaoDamDe[i] + "</td>";
+		}
+		$(".baocao__tinhtoandamde").html(baoCaoDamDe.join());
+		// baocao tính toán sườn ngăn.
+		var baoCaosuonNgan = [];
+		baoCaosuonNgan[0] = suonngan.Lw;
+		baoCaosuonNgan[1] = suonngan.cCao;
+		baoCaosuonNgan[2] = suonngan.cRong;
+		baoCaosuonNgan[3] = suonngan.cDay;
+		baoCaosuonNgan[4] = suonngan.cCaoDuongHan;
+		baoCaosuonNgan[5] = Math.round(suonngan.momen);
+		baoCaosuonNgan[6] = Math.round(suonngan.luccat);
+		baoCaosuonNgan[7] = Math.round(suonngan.qTaiPhanBo);
+		baoCaosuonNgan[8] = Math.round(suonngan.ungSuatDuongHan);
+		for(i = 0; i < baoCaosuonNgan.length;i++){
+			baoCaosuonNgan[i] = "<td class=\"table__baocao\">" + baoCaosuonNgan[i] + "</td>";
+		}
+		$(".baocao__tinhtoansuonngan").html(baoCaosuonNgan.join());
+		// baocao tính toán bulong.
+		var baoCaoBuLong = [];
+		baoCaoBuLong[0] = bulongneo.delta;
+		baoCaoBuLong[1] = Math.round(bulongneo.Abl);
+		baoCaoBuLong[2] = Math.round(bulongneo.Nbl);
+		baoCaoBuLong[3] = bulongneo.a;
+		baoCaoBuLong[4] = bulongneo.duongKinh;
+		for(i = 0; i < baoCaoBuLong.length;i++){
+			baoCaoBuLong[i] = "<td class=\"table__baocao\">" + baoCaoBuLong[i] + "</td>";
+		}
+		$(".baocao__tinhtoanbulong").html(baoCaoBuLong.join());
+		// baocao tính toán sườn đỡ bulong.
+		var baoCaoSuonDo = [];
+		baoCaoSuonDo[0] = suondobulong.cCao;
+		baoCaoSuonDo[1] = suondobulong.cRong;
+		baoCaoSuonDo[2] = suondobulong.cDay;
+		baoCaoSuonDo[3] = suondobulong.cCaoDuongHan;
+		baoCaoSuonDo[4] = suondobulong.dienTichDuongHan;
+		baoCaoSuonDo[5] = Math.round(suondobulong.momen);
+		baoCaoSuonDo[6] = Math.round(suondobulong.momenKhangUon);
+		baoCaoSuonDo[7] = Math.round(suondobulong.sigma);
+		baoCaoSuonDo[8] = Math.round(suondobulong.ungSuatDuongHan);
+		for(i = 0; i < baoCaoSuonDo.length;i++){
+			baoCaoSuonDo[i] = "<td class=\"table__baocao\">" + baoCaoSuonDo[i] + "</td>";
+		}
+		$(".baocao__tinhtoansuondo").html(baoCaoSuonDo.join());
 	});
 });

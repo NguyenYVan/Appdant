@@ -78,10 +78,10 @@ $(document).ready(function() {
 			points[2] =width;
 			points[3] =height - parseFloat($("#txt__section__chieucao").val())/2 + parseFloat($("#txt__section__daycanh").val());
 			// point3
-			points[4] =width + 70;
+			points[4] =width + 50;
 			points[5] =height - parseFloat($("#txt__section__chieucao").val())/2 + parseFloat($("#txt__section__daycanh").val());
 			// point4
-			points[6] =width + 70;
+			points[6] =width + 50;
 			points[7] =height - parseFloat($("#txt__section__chieucao").val())/2;
 			// point5
 			points[8] =width;
@@ -97,22 +97,22 @@ $(document).ready(function() {
 		// lấy giá trị kết qua table truyền vào mảng.
 		if($(".table__value").length !== 0) {
 			// point1
-			points[0] =width + 70;
+			points[0] =width + 50;
 			points[1] =height - parseFloat($("#txt__section__chieucao").val())/2 - 5;
 			// point2
-			points[2] =width + 70;
+			points[2] =width + 50;
 			points[3] =height - 5;
 			// point3
-			points[4] =width + 60;
+			points[4] =width + 40;
 			points[5] =height;
 			// point4
-			points[6] =width + 80;
+			points[6] =width + 60;
 			points[7] =height;
 			// point5
-			points[8] =width + 70;
+			points[8] =width + 50;
 			points[9] =height + 5;
 			// point6
-			points[10] =width + 70;
+			points[10] =width + 50;
 			points[11] =height + parseFloat($("#txt__section__chieucao").val())/2 + 5;
 			// chuyển tọa độ vào svg
 			var html ='<polyline points="' + points.join(" ") + '"></polyline>';
@@ -374,19 +374,19 @@ $(document).ready(function() {
 																		+ parseFloat($("#txt__section__chieucao").val())
 																		+ parseFloat($("#txt__section__daycanh").val())
 																		+ tableValue[11])
-							+ banDe_matDung(svgWidht/2 + 70,svgHeight/2)
-							+ banDe_matDungCot(svgWidht/2 + 70,svgHeight/2)
-              + banDe_matDungCot(svgWidht/2 + 70,svgHeight/2 
+							+ banDe_matDung(svgWidht/2 + 40,svgHeight/2)
+							+ banDe_matDungCot(svgWidht/2 + 40,svgHeight/2)
+              + banDe_matDungCot(svgWidht/2 + 40,svgHeight/2 
                                   + parseFloat($("#txt__section__chieucao").val()) 
                                   - parseFloat($("#txt__section__daycanh").val()))
-							+ breakLine(svgWidht/2 + 70,svgHeight/2)
-              + suonNgan_matDung(svgWidht/2 + 70,svgHeight/2)
-              + damDe_matDung(svgWidht/2 + 70,svgHeight/2)
-              + damDe_matDung(svgWidht/2 + 70,svgHeight/2 
+							+ breakLine(svgWidht/2 + 40,svgHeight/2)
+              + suonNgan_matDung(svgWidht/2 + 40,svgHeight/2)
+              + damDe_matDung(svgWidht/2 + 40,svgHeight/2)
+              + damDe_matDung(svgWidht/2 + 40,svgHeight/2 
                                               + parseFloat($("#txt__section__chieucao").val())
                                               + parseFloat($("#txt__section__daycanh").val()))
-              + suonDoBuLong_matDung1(svgWidht/2 + 70,svgHeight/2 - tableValue[6])
-              + suonDoBuLong_matDung2(svgWidht/2 + 70,svgHeight/2 + tableValue[6]);
+              + suonDoBuLong_matDung1(svgWidht/2 + 40,svgHeight/2)
+              + suonDoBuLong_matDung2(svgWidht/2 + 40,svgHeight/2);
 		$("#vechancot").html(html);
 	});
 });
