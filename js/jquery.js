@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  // button nhập liệu nhanh
+  $('.nhaplieu__standardbase').click(function () {
+    $(this).toggleClass('active');
+  });
   // swiper
   var swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
@@ -28,11 +32,13 @@ $(document).ready(function () {
 		$("body").addClass("menuactive");
 		$("html").css("overflow","hidden");
     $(".header__title").addClass("left65");
+    $('.nhaplieu__standardbase').addClass('collapse');
   });
   $(".menu__close").click(function () { 
 		$("body").removeClass("menuactive");
 		$("html").css("overflow","auto");
-		$(".header__title").removeClass("left65");
+    $(".header__title").removeClass("left65");
+    $('.nhaplieu__standardbase').removeClass('collapse');
   });
   // select
   $(".select__input").focus(function () { 

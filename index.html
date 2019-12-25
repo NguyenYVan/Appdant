@@ -59,6 +59,8 @@
           </div>
         </div>
         <div class="nhaplieu wow fadeInLeft collapse">
+          <button class="nhaplieu__standardbase transition03s float-right d-none"></button>
+          <span class="clearfloat"></span>
           <h2 class="title text-capitalize wow fadeInLeft">nội lực</h2>
           <form action="" class="form">
             <h3 class="title title__form text-capitalize">tải trọng gió tính toán</h3>
@@ -117,7 +119,7 @@
               </div>
               <div class="form__item w-100 mrtop-10">
                 <label for="#" class="form__label">Cường độ tính toán(<span>daN/cm<sup>2</sup></span>)</label>
-                <input type="text" id="txt__steel__cuongdott" class="form-control" disabled>
+                <input type="text" id="txt__steel__cuongdott" class="form-control">
               </div>
             </div>
             <h3 class="title title__form text-capitalize">đặc điểm cơ lý của bê tông</h3>
@@ -137,12 +139,12 @@
               <div class="form__item w-50 mrtop-10">
                 <!-- Rb cường độ chịu nén -->
                 <label for="#" class="form__label">R<sub>b</sub>(<span>daN/cm<sup>2</sup></span>)</label>
-                <input type="text" id="txt__concrete__rb" class="form-control" disabled>
+                <input type="text" id="txt__concrete__rb" class="form-control">
               </div>
               <div class="form__item w-50 mrtop-10">
                 <!-- Rbt cường độ chịu kéo -->
                 <label for="#" class="form__label">R<sub>bt</sub>(<span>daN/cm<sup>2</sup></span>)</label>
-                <input type="text" id="txt__concrete__rbt" class="form-control" disabled>
+                <input type="text" id="txt__concrete__rbt" class="form-control">
               </div>
             </div>
             <h3 class="title title__form text-capitalize">đặc điểm cơ lý của bu lông</h3>
@@ -161,7 +163,7 @@
               </div>
             <div class="form__item w-100 mrtop-10">
               <label for="#" class="form__label">Cường độ chịu kéo(<span>daN/cm<sup>2</sup></span>)</label>
-              <input type="text" id="txt__bold__cuongdochiukeo" class="form-control" disabled>
+              <input type="text" id="txt__bold__cuongdochiukeo" class="form-control">
             </div>
             </div>
             <h3 class="title title__form text-capitalize">phương pháp hàn</h3>
@@ -180,7 +182,7 @@
               </div>
               <div class="form__item w-100 mrtop-10">
                 <label for="#" class="form__label">Cường độ tính toán(<span>daN/cm<sup>2</sup></span>)</label>
-                <input type="text" id="txt__weld__cuongdott" class="form-control" disabled>
+                <input type="text" id="txt__weld__cuongdott" class="form-control">
               </div>
             </div>
           </form>
@@ -204,9 +206,7 @@
                 <input type="text" id="txt__section__daycanh" class="form-control" value="1.2">
               </div>
             </div>
-            <div class="svg__wrap">
-              <svg class="svg__section" id="tietdiencot" width="500" height="500">
-              </svg>
+            <div class="svg__wrap text-center" id="creat1">
             </div>
           </form>
         </div>
@@ -243,10 +243,8 @@
                 </tr>
               </table>
             </div>
-            <button type="button" id="btn__ve" class="btn savedata__btn text-capitalize">vẽ</button>
-            <div class="svg__wrap">
-              <svg class="svg__section svg__scale" id="vechancot" width="500" height="500">
-              </svg>
+            <button type="button" id="btn__ve" class="btn text-capitalize">vẽ</button>
+            <div class="svg__wrap svg__rotate90 text-center" id="creat2">
             </div>
           </form>
         </div>
@@ -429,6 +427,8 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/xulydulieudauvao.js"></script>
     <script src="./js/tinhtoanthietke.js"></script>
+    <script src="./js/svg.min.js"></script>
+    <script src='https://unpkg.com/panzoom@8.7.3/dist/panzoom.min.js'></script>
     <script src="./js/ve.js"></script>
   </body>
 </html>

@@ -17,6 +17,46 @@
       width: 100%;
       height: 2px;
       background-color: #000; }
+  .main .nhaplieu__standardbase {
+    position: relative;
+    width: 40px;
+    height: 15px;
+    margin-top: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.5) inset;
+    cursor: pointer;
+    z-index: 0; }
+    .main .nhaplieu__standardbase::after {
+      position: absolute;
+      content: '';
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 30px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #192a80;
+      box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.5);
+      transition: inherit; }
+    .main .nhaplieu__standardbase::before {
+      position: absolute;
+      content: '';
+      border-radius: 20px;
+      background-color: #192a80;
+      opacity: 0.9;
+      right: 0;
+      top: 0;
+      left: 100%;
+      bottom: 0;
+      opacity: 0;
+      transition: 0.6s; }
+    .main .nhaplieu__standardbase.active {
+      background-color: transparent; }
+      .main .nhaplieu__standardbase.active::after {
+        left: 10px; }
+      .main .nhaplieu__standardbase.active::before {
+        left: 0;
+        opacity: 1; }
   .main .trangchu__intro {
     font-size: 14px;
     position: relative; }
@@ -81,22 +121,12 @@
     margin-top: 25px; }
   .form .svg__wrap {
     position: relative;
-    width: 100%;
+    width: 295px;
     height: 300px;
     margin-top: 25px;
-    overflow: scroll;
-    -webkit-appearance: none; }
-  .form .svg__wrap::-webkit-scrollbar {
-    display: none; }
-  .form .svg__section {
-    position: absolute;
-    transform: translate(-50%, -50%) scale(2);
-    top: 50%;
-    left: 50%; }
-  .form .svg__rotate90 {
-    transform: translate(-50%, -50%) rotate(90deg); }
-  .form .svg__scale {
-    transform: translate(-50%, 0%) scale(2) rotate(-90deg); }
+    overflow: hidden; }
+  .form .svg__rotate90 svg {
+    transform: rotate(-90deg); }
   .form .form-control:disabled, .form .form-control[readonly] {
     background-color: transparent; }
 
@@ -125,9 +155,6 @@
     visibility: visible; }
   .select.active .select__icon {
     transform: translate(-50%, -50%) rotate(180deg); }
-
-.savedata__btn {
-  margin: 25px 25px 0 0; }
 
 .tablewrap {
   overflow-x: scroll; }

@@ -22,6 +22,54 @@ $colormain2: #770000;
 			background-color: #000;
 		}
 	}
+	.nhaplieu {
+		&__standardbase {
+			position: relative;
+			width: 40px;
+			height: 15px;
+			margin-top: 5px;
+			border-radius: 20px;
+			box-shadow: 0 0 4px 2px rgba(#000, 0.5) inset;
+			cursor: pointer;
+			z-index: 0;
+			&::after {
+				position: absolute;
+				content: '';
+				transform: translate(-50%,-50%);
+				top: 50%;
+				left: 30px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: rgba($colormain, 1);
+				box-shadow: 0 0 4px 2px rgba(#000, 0.5);
+				transition: inherit;
+			}
+			&::before {
+				position: absolute;
+				content: '';
+				border-radius: 20px;
+				background-color: $colormain;
+				opacity: 0.9;
+				right: 0;
+				top: 0;
+				left: 100%;
+				bottom: 0;
+				opacity: 0;
+				transition: 0.6s;
+			}
+			&.active {
+				background-color: transparent;
+				&::after {
+					left: 10px;
+				}
+				&::before {
+					left: 0;
+					opacity: 1;
+				}
+			}
+		}
+	}
 	.trangchu {
 		&__intro {
 			font-size: 14px;
@@ -112,26 +160,13 @@ $colormain2: #770000;
 	.svg {
 		&__wrap {
 			position: relative;
-			width: 100%;
+			width: 295px;
 			height: 300px;
 			margin-top: 25px;
-			overflow: scroll;
-			-webkit-appearance: none;
+			overflow: hidden;
 		}
-		&__wrap::-webkit-scrollbar {
-			display: none;
-		}
-		&__section {
-			position: absolute;
-			transform: translate(-50%, -50%) scale(2);
-			top: 50%;
-			left: 50%;
-		}
-		&__rotate90 {
-			transform: translate(-50%, -50%) rotate(90deg);
-		}
-		&__scale {
-			transform: translate(-50%, 0%) scale(2) rotate(-90deg);
+		&__rotate90 svg{
+			transform: rotate(-90deg);
 		}
 	}
 	.form-control:disabled, .form-control[readonly] {
@@ -169,9 +204,6 @@ $colormain2: #770000;
 			transform: translate(-50%, -50%) rotate(180deg);
 		}
 	}
-}
-.savedata__btn {
-	margin: 25px 25px 0 0;
 }
 .tablewrap {
   overflow-x: scroll;

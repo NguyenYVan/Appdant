@@ -18,6 +18,9 @@ h1, h2, h3, h4, h5, h6 {
 sub, sup {
   z-index: -9999;
 }
+.clearfloat {
+ clear: both;
+}
 .clearfix {
   position: relative;
   &::after {
@@ -89,7 +92,7 @@ body {
   }
 }
 svg {
-  stroke: #ff0000;
+  stroke: #000;
   stroke-width: 0.25;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -134,5 +137,10 @@ svg {
   .swiper__img {
     width: 100%;
     height: auto;
+  }
+}
+@media screen and (min-width: 767px) {
+  .swiper__img {
+    max-height: 300px;
   }
 }
